@@ -172,7 +172,7 @@ class SortedFilteredSelectMultiple(forms.SelectMultiple):
                 output.append(self.render_option(selected_choices, option_value, option_label))
         return u'\n'.join(output)
 
-    def _has_changed(self, initial, data):
+    def has_changed(self, initial, data):
         if initial is None:
             initial = []
         if data is None:
